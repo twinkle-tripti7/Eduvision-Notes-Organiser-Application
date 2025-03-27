@@ -1,0 +1,12 @@
+Flask
+Flask-SQLAlchemy
+Werkzeug
+Pillow
+pytesseract
+Authlib
+python-dotenv
+Flask-OAuthlib
+gunicorn
+requests
+Flask-Login
+Flask-WTF

@@ -1,0 +1,22 @@
+# Ignore the virtual environment
+.venv/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore environment variables
+.env
+
+# Ignore database files (important for security)
+instance/users.db
+
+# Ignore logs
+*.log
+logs/
+
+# Ignore IDE & OS files
+.vscode/
+.DS_Store
