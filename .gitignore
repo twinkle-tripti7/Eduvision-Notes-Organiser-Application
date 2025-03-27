@@ -10,8 +10,6 @@ __pycache__/
 # Ignore environment variables
 .env
 
-# Ignore database files (important for security)
-instance/users.db
 
 # Ignore logs
 *.log
