@@ -12,6 +12,9 @@ import os
 # Load environment variables from .env file
 load_dotenv()
 
+pytesseract.pytesseract.tesseract_cmd = r"C:\\Users\\HP\AppData\\Local\\Programs\\Tesseract-OCR\\tesseract.exe"
+
+
 app = Flask(__name__, static_folder="static")
 app.secret_key = os.getenv("SECRET_KEY")
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
