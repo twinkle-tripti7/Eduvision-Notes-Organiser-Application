@@ -1,7 +1,5 @@
-#!/usr/bin/env bash
+#!/bin/bash
+sudo apt-get update
+sudo apt-get install -y tesseract-ocr
 
-# Install Tesseract
-apt-get update && apt-get install -y tesseract-ocr
-
-# Install project dependencies
 pip install -r requirements.txt
