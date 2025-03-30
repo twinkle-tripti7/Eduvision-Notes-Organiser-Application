@@ -39,26 +39,26 @@ Stores user **notes, images, and metadata**, ensuring easy access and efficient 
 
 
 # Setup & Installation🔧
-###1️⃣ Clone the repository
+1️⃣ Clone the repository
 git clone https://github.com/your-username/eduvision-notes-organizer.git
 cd eduvision-notes-organizer
 
-###2️⃣ Install dependencies
+2️⃣ Install dependencies
 pip install -r requirements.txt
 
-###3️⃣ Run the application
+3️⃣ Run the application
 python app.py
 
-###4️⃣ Open in browser
+4️⃣ Open in browser
 http://127.0.0.1:5000
 
 🎯 Future Enhancements
-###📌 OCR Integration – Extract text from images automatically for better searchability
-###📌 Dark Mode – Enhance accessibility and improve the user experience
-###📌 Cloud Storage Support – Integrate with Google Drive or OneDrive for seamless access
+### 📌 OCR Integration – Extract text from images automatically for better searchability
+### 📌 Dark Mode – Enhance accessibility and improve the user experience
+### 📌 Cloud Storage Support – Integrate with Google Drive or OneDrive for seamless access
 
 💡 Contributing
-###Contributions are welcome! If you’d like to enhance the features, fix bugs, or improve documentation, feel free to fork the repo.
+### Contributions are welcome! If you’d like to enhance the features, fix bugs, or improve documentation, feel free to fork the repo.
 
 
 
