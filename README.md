@@ -30,7 +30,7 @@ Stores user **notes, images, and metadata**, ensuring easy access and efficient 
 - **Flask-Login** – Handles **user session management** and authentication, allowing only authorized users to access their stored data.  
 
 
-# Project Structure📂
+## Project Structure📂
 ### /static/uploads       # Stores uploaded files  
 ### /templates/index.html # Main UI for note management  
 ### auth.py               # Handles authentication & user sessions  
@@ -38,7 +38,7 @@ Stores user **notes, images, and metadata**, ensuring easy access and efficient 
 ### models.py             # Database models for storing notes  
 
 
-# Setup & Installation🔧
+## Setup & Installation🔧
 1️⃣ Clone the repository
 git clone https://github.com/your-username/eduvision-notes-organizer.git
 cd eduvision-notes-organizer
@@ -52,12 +52,12 @@ python app.py
 4️⃣ Open in browser
 http://127.0.0.1:5000
 
-🎯 Future Enhancements
+## 🎯 Future Enhancements
 ### 📌 OCR Integration – Extract text from images automatically for better searchability
 ### 📌 Dark Mode – Enhance accessibility and improve the user experience
 ### 📌 Cloud Storage Support – Integrate with Google Drive or OneDrive for seamless access
 
-💡 Contributing
+## 💡 Contributing
 ### Contributions are welcome! If you’d like to enhance the features, fix bugs, or improve documentation, feel free to fork the repo.
 
 
