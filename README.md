@@ -1,16 +1,18 @@
 # Eduvision-Notes-Organiser-Application
 
-## Many times, while studying or attending a lecture, students take screenshots of important slides, notes, or code snippets, intending to organize them later. However, these images often get lost in a cluttered phone gallery.
+##65 Many times, while studying or attending a lecture, students take screenshots of important slides, notes, or code snippets, intending to organize them later. However, these images often get lost in a cluttered phone gallery.
 ## EduVision was built to solve this problem by providing a structured way to store images under categories, search them easily, and even edit them without the hassle of manual organization.
 
 
-# Features ✨ 
-## ✅ Organized Storage: Save images under custom tags (e.g., "Math", "AI Notes", "Code Snippets") for quick retrieval.
-## ✅ Quick Search: Find stored screenshots instantly using keyword-based search.
-## ✅ In-App Editing: Modify stored images directly within the app without exporting.
-## ✅ One-Click Upload: Capture screenshots and store them with just one tap.
-## ✅ Easy Cleanup: Once you no longer need an image, delete it effortlessly.
-## ✅ Secure Google Authentication: Your images are stored securely with Firebase Auth, ensuring only you have access.
+## ✨ Features  
+
+✅ **Organized Storage** – Save and categorize images under custom tags like **"Math," "AI Notes," or "Code Snippets"** for **easy retrieval** whenever needed.  
+✅ **Quick Search** – Instantly find stored screenshots using a **powerful keyword-based search**, so you never lose important notes again.  
+✅ **In-App Editing** – Modify stored images **directly within the app** without needing to export them to another tool, making quick edits seamless.  
+✅ **One-Click Upload** – Capture screenshots and store them in the app **with just a single tap**, reducing the hassle of manual organization.  
+✅ **Easy Cleanup** – No longer need a saved image? **Delete it effortlessly** in just one click, keeping your storage clutter-free.  
+✅ **Secure Google Authentication** – All your images and data are **protected using Firebase Authentication**, ensuring that **only you** have access to your stored content.  
+
 
 
 # Tech Stack🔧 
