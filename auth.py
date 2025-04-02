@@ -14,6 +14,7 @@ load_dotenv()
 
 pytesseract.pytesseract.tesseract_cmd = r"tesseract"
 
+os.system("ldd --version")
 
 app = Flask(__name__, static_folder="static")
 app.secret_key = os.getenv("SECRET_KEY")
