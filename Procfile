@@ -1,1 +1,1 @@
-web: gunicorn auth:app
+web: bash start.sh
