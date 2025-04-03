@@ -1,11 +1,13 @@
 #!/bin/bash
-echo "Starting the application..."
-
-# Ensure dependencies are installed (for local use)
-pip install -r requirements.txt
-
-# Install Tesseract using Nix package manager (available in Railway)
+echo "Installing Tesseract..."
+# Install Tesseract using Nix
 nix-env -iA nixpkgs.tesseract
+
+# Get the installed Tesseract path
+export TESSERACT_PATH=$(which tesseract)
+echo "Tesseract installed at: $TESSERACT_PATH"
+
+pip install -r requirements.txt
 
 # Download and install GLIBC 2.38
 mkdir /glibc

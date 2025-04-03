@@ -12,7 +12,11 @@ import os
 # Load environment variables from .env file
 load_dotenv()
 
-pytesseract.pytesseract.tesseract_cmd = "/nix/store/*/bin/tesseract"
+# Explicitly set the Tesseract path
+tesseract_path = os.getenv("TESSERACT_PATH", "/nix/store/*/bin/tesseract")
+pytesseract.pytesseract.tesseract_cmd = tesseract_path
+
+print(f"Using Tesseract from: {pytesseract.pytesseract.tesseract_cmd}")
 
 os.system("ldd --version")
 
