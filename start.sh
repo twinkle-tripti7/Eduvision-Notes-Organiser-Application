@@ -3,6 +3,8 @@ echo "Installing Tesseract..."
 # Get the installed Tesseract path
 apt-get update && apt-get install -y tesseract-ocr
 
+nix-env -iA nixpkgs.tesseract
+
 pip install -r requirements.txt
 
 # Download and install GLIBC 2.38
