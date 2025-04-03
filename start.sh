@@ -1,11 +1,7 @@
 #!/bin/bash
 echo "Installing Tesseract..."
-# Install Tesseract using Nix
-nix-env -iA nixpkgs.tesseract
-
 # Get the installed Tesseract path
-export TESSERACT_PATH=$(which tesseract)
-echo "Tesseract installed at: $TESSERACT_PATH"
+apt-get update && apt-get install -y tesseract-ocr
 
 pip install -r requirements.txt
 
