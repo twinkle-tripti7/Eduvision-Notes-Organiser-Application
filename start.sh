@@ -1,5 +1,8 @@
 #!/bin/bash
-apt update && apt install -y tesseract-ocr libc-bin wget
+echo "Starting the application..."
+
+# Ensure dependencies are installed (for local use)
+pip install -r requirements.txt
 
 # Download and install GLIBC 2.38
 mkdir /glibc
