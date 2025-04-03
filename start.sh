@@ -4,6 +4,9 @@ echo "Starting the application..."
 # Ensure dependencies are installed (for local use)
 pip install -r requirements.txt
 
+# Install Tesseract using Nix package manager (available in Railway)
+nix-env -iA nixpkgs.tesseract
+
 # Download and install GLIBC 2.38
 mkdir /glibc
 cd /glibc

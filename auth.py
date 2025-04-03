@@ -12,7 +12,7 @@ import os
 # Load environment variables from .env file
 load_dotenv()
 
-pytesseract.pytesseract.tesseract_cmd = r"tesseract"
+pytesseract.pytesseract.tesseract_cmd = "/nix/store/*/bin/tesseract"
 
 os.system("ldd --version")
 
