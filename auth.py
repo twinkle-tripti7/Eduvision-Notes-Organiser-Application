@@ -1,3 +1,4 @@
+from datetime import datetime
 from flask import Flask, render_template, request, redirect, url_for, flash, session,send_from_directory
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -7,14 +8,10 @@ import pytesseract
 from authlib.integrations.flask_client import OAuth
 import os
 from dotenv import load_dotenv
-import os
 
-# Load environment variables from .env file
 load_dotenv()
 
-pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
-
-os.system("ldd --version")
+pytesseract.pytesseract.tesseract_cmd = r"tesseract"
 
 app = Flask(__name__, static_folder="static")
 app.secret_key = os.getenv("SECRET_KEY")
@@ -59,6 +56,7 @@ class Note(db.Model):
     extracted_text = db.Column(db.Text, nullable=False)
     tags = db.Column(db.String(255), nullable=False)
     upload_date = db.Column(db.DateTime, default=db.func.current_timestamp())
+    
 
 
 # Function to create user if not exists
@@ -69,6 +67,7 @@ def create_user(email, username):
         db.session.add(user)
         db.session.commit()
     return user
+
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -98,6 +97,7 @@ def register():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    print("Login page route triggered")
     if request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
@@ -240,6 +240,7 @@ def index():
       notes = Note.query.filter_by(user_id=session['user_id']).all()
     return render_template('index.html', notes=notes)
 
+
 @app.route('/edit/<int:note_id>', methods=['GET', 'POST'])
 def edit_note(note_id):
     if 'user_id' not in session:
@@ -260,6 +261,8 @@ def edit_note(note_id):
     
     return render_template('edit.html', note=note)
 
+
+
 @app.route('/delete/<int:note_id>', methods=['POST'])
 def delete_note(note_id):
     if 'user_id' not in session:
@@ -279,6 +282,24 @@ def delete_note(note_id):
         flash('Unauthorized action!', 'error')
     
     return redirect(url_for('index'))
+
+
+
+
+@app.route('/manual_note', methods=['GET', 'POST'])
+def manual_note():
+    if request.method == 'POST':
+        title = request.form['title']
+        content = request.form['content']
+        tags = request.form['tags']
+        new_note = Note(user_id=session['user_id'], filename=title, extracted_text=content, tags=tags, upload_date=datetime.now())
+        db.session.add(new_note)
+        db.session.commit()
+        flash('Note added manually!')
+        return redirect(url_for('index'))
+    return render_template('manual_note.html')
+
+
 
 if __name__ == '__main__':
     with app.app_context():
